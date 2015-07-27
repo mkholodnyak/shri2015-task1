@@ -1,0 +1,13 @@
+{
+  "name": "airport-table",
+  "version": "1.0.0",
+  "description": "Simple airport table for SHRI",
+  "author": "Maxim Kholodnyak",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.8.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2"
+  }
+}
