@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 //
 // "Логические" для симуляции скриптов.
@@ -6,27 +6,33 @@
 
 // При ненажатой кнопке "Вылет"/"Прилёт" сделать стиль кнопки "нажатым"
 #departure-checkbox:checked ~ table #departure-label,
-#arrival-checkbox:checked ~ table #arrival-label {
-  color: $active-link-color;
-  border-bottom: 1px dashed $active-link-color;
+#arrival-checkbox:checked ~ table #arrival-label
+{
+    color: $active-link-color;
+    border-bottom: 1px dashed $active-link-color;
 }
 
 // При ненажатой кнопке "Вылет"/"Прилёт" сделать стиль кнопки "ненажатым"
 #departure-checkbox ~ table #departure-label,
-#arrival-checkbox ~ table #arrival-label {
-  color: white;
+#arrival-checkbox ~ table #arrival-label
+{
+    color: white;
 }
 
 // При нажатой кнопке "Вылет"/"Прилёт" показать содержимое таблицы
 #departure-checkbox:checked ~ table .trip_type_departure,
-#arrival-checkbox:checked ~ table .trip_type_arrival {
-  display: table;
-  opacity: 1;
+#arrival-checkbox:checked ~ table .trip_type_arrival
+{
+    display: table;
+
+    opacity: 1;
 }
 
 // При ненажатой кнопке "Вылет"/"Прилёт" скрыть содержимое таблицы
 #departure-checkbox ~ table .trip_type_departure,
-#arrival-checkbox ~ table .trip_type_arrival {
-  display: none;
-  opacity: 0;
+#arrival-checkbox ~ table .trip_type_arrival
+{
+    display: none;
+
+    opacity: 0;
 }

@@ -1,48 +1,50 @@
-@import "../variables";
+@import '../variables';
 
-.trip-info {
-  &__content {
-    margin-left: 120px;
+.trip-info
+{
+    &__content
+    {
+        margin-left: 120px;
 
-    &::before {
-      content: '';
-      position: absolute;
+        &::before
+        {
+            position: absolute;
+            top: 50%;
+            left: 20px;
 
-      display: block;
+            display: block;
 
-      top: 50%;
-      left: 20px;
+            width: 100px;
+            height: 100px;
 
-      width: 100px;
-      height: 100px;
+            content: '';
+            transform: translateY(-50%);
 
-      border: 2px solid $main-color;
-      border-radius: 50%;
-
-      transform: translateY(-50%);
-
-      background: no-repeat 50% url('../../' + $image-path + 'arrival-icon.png');
-      background-size: contain;
+            border: 2px solid $main-color;
+            border-radius: 50%;
+            background: no-repeat 50% url('../../' ) $image-path + 'arrival-icon.png';
+            background-size: contain;;
+        }
     }
-  }
 
-  &__city {
-    margin: 0;
+    &__city
+    {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.8;
 
-    line-height: 1.8;
-    font-size: 24px;
-    font-weight: bold;
+        margin: 0;
 
-    color: #34495F;
-  }
+        color: #34495f;
+    }
 
-  &__close-button {
-    width: $close-button-size;
-    height: $close-button-size;
+    &__close-button
+    {
+        position: absolute;
+        top: 3px;
+        right: 3px;
 
-    position: absolute;
-    right: 3px;
-    top: 3px;
-
-  }
+        width: $close-button-size;
+        height: $close-button-size;
+    }
 }

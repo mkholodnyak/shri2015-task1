@@ -1,103 +1,131 @@
-@import "../variables";
+@import '../variables';
 
-.table-header {
-  background-color: $main-color;
-  color: #fff;
+.table-header
+{
+    color: #fff;
+    background-color: $main-color;
 
-  &__cell {
-    padding: 10px 3px;
-    position: relative;
+    &__cell
+    {
+        position: relative;
 
-    text-align: left;
+        padding: 10px 3px;
 
-    &_type {
-      &_switchers {
-        width: 80px;
-        padding-left: 5px;
-      }
+        text-align: left;
 
-      &_time {
-        width: 80px;
-      }
+        &_type
+        {
+            &_switchers
+            {
+                width: 80px;
+                padding-left: 5px;
+            }
 
-      &_flight-number {
-        width: 80px;
-      }
-    }
-  }
+            &_time
+            {
+                width: 80px;
+            }
 
-  @media all and (max-width: 400px) {
-    font-size: 14px;
-
-    &__cell {
-      &_type {
-        &_switchers {
-          width: 50px;
+            &_flight-number
+            {
+                width: 80px;
+            }
         }
-      }
-
-      &_time {
-        width: 50px;
-      }
     }
 
-  }
+    @media all and (max-width: 400px)
+    {
+        font-size: 14px;
 
-  @media all and (max-width: 500px) {
-    &__cell {
-      &_type {
-        &_status {
-          display: none;
+        &__cell
+        {
+            &_type
+            {
+                &_switchers
+                {
+                    width: 50px;
+                }
+            }
+
+            &_time
+            {
+                width: 50px;
+            }
         }
-      }
     }
-  }
 
-  @media all and (max-width: 600px) {
-    &__cell {
-      &_type {
-        &_aircraft {
-          display: none;
+    @media all and (max-width: 500px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_status
+                {
+                    display: none;
+                }
+            }
         }
-
-        &_flight-number {
-          width: 60px;
-        }
-      }
     }
-  }
 
-  @media all and (max-width: 700px) {
-    &__cell {
-      &_type {
-        &_airline-logo {
-          display: none;
-        }
-      }
-    }
-  }
+    @media all and (max-width: 600px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_aircraft
+                {
+                    display: none;
+                }
 
-  @media all and (max-width: 800px) {
-    &__cell {
-      &_type {
-        &_note {
-          display: none;
+                &_flight-number
+                {
+                    width: 60px;
+                }
+            }
         }
-      }
     }
-  }
 
-  @media all and (max-width: 900px) {
-    &__cell {
-      &_type {
-        &_airline {
-          display: none;
+    @media all and (max-width: 700px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_airline-logo
+                {
+                    display: none;
+                }
+            }
         }
-      }
     }
-  }
+
+    @media all and (max-width: 800px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_note
+                {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 900px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_airline
+                {
+                    display: none;
+                }
+            }
+        }
+    }
 }
-
-
-
-

@@ -1,198 +1,260 @@
-@import "../variables";
+@import '../variables';
 
 $highlight-color: #fdebd8;
 
 $highlight-light-color: #fef6ee;
 $highlight-dark-color: #fbdab6;
 
-.trip {
-  transition: opacity 1s ease-out;
+.trip
+{
+    display: table;
 
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+    width: 100%;
 
-  &:nth-child(odd) {
-    background-color: $highlight-light-color; // Для совместимости
-    background-color: rgba(249, 198, 143, 0.15);
-  }
+    table-layout: fixed;
 
-  &__cell {
-    position: relative;
-    padding: 10px 15px;
-    /*pointer-events:none;*/
+    transition: opacity 1s ease-out;
 
-    &:hover {
-      background-color: $highlight-dark-color; // Для совместимости
-      background-color: rgba(249, 198, 143, 0.65);
-
-      //Подсветка уголком
-      &::after {
-        content: "";
-        position: absolute;
-        background-color: $highlight-color;
-        left: 0;
-        top: -$very-big-number;
-        height: $very-big-number;
-        width: 100%;
-        z-index: -1;
-      }
-
-      //Подсветка уголком
-      &::before {
-        content: '';
-        position: absolute;
-        background-color: $highlight-color;
-        left: -5000px;
-        top: 0;
-        height: 100%;
-        width: 5000px;
-        z-index: -1;
-      }
+    &:nth-child(odd)
+    {
+        background-color: $highlight-light-color; // Для совместимости
+        background-color: rgba(249, 198, 143, .15);
     }
 
-    &_type {
-      &_icon {
-        width: 50px;
-        text-indent: -$very-big-number;
-      }
+    &__cell
+    {
+        position: relative;
 
-      &_time {
-        width: 60px;
-      }
+        padding: 10px 15px;
+        /*pointer-events:none;*/
 
-      &_flight-number {
-        width: 60px;
-      }
+        &:hover
+        {
+            background-color: $highlight-dark-color; // Для совместимости
+            background-color: rgba(249, 198, 143, .65);
 
-      &_city {
-        font-weight: bold;
-        color: #907b29;
-      }
+            //Подсветка уголком
+            &::after
+            {
+                position: absolute;
+                z-index: -1;
+                top: -$very-big-number;
+                left: 0;
 
-      &_airline-logo {
-        cursor: default;
-      }
+                width: 100%;
+                height: $very-big-number;
 
-      &_aircraft span:last-of-type {
-        display: none;
-      }
+                content: '';
 
-      &_status {
-        font-size: 14px;
-      }
+                background-color: $highlight-color;
+            }
+
+            //Подсветка уголком
+            &::before
+            {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: -5000px;
+
+                width: 5000px;
+                height: 100%;
+
+                content: '';
+
+                background-color: $highlight-color;
+            }
+        }
+
+        &_type
+        {
+            &_icon
+            {
+                width: 50px;
+
+                text-indent: -$very-big-number;
+            }
+
+            &_time
+            {
+                width: 60px;
+            }
+
+            &_flight-number
+            {
+                width: 60px;
+            }
+
+            &_city
+            {
+                font-weight: bold;
+
+                color: #907b29;
+            }
+
+            &_airline-logo
+            {
+                cursor: default;
+            }
+
+            &_aircraft span:last-of-type
+            {
+                display: none;
+            }
+
+            &_status
+            {
+                font-size: 14px;
+            }
+        }
     }
-  }
 
-  &__link {
-    display: block;
+    &__link
+    {
+        display: block;
 
-    cursor: pointer;
-    color: inherit;
-    text-decoration: none;
-  }
+        cursor: pointer;
+        text-decoration: none;
 
-  @media all and (max-width: 900px) {
-    &__cell {
-      &_type {
-        &_status {
-          font-size: 12px;
-        }
-
-        &_airline {
-          display: none;
-        }
-      }
+        color: inherit;
     }
-  }
 
-  @media all and (max-width: 800px) {
-    &__cell {
-      &_type {
-        &_aircraft {
-          width: 50px;
-        }
+    @media all and (max-width: 900px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_status
+                {
+                    font-size: 12px;
+                }
 
-        &_note {
-          display: none;
+                &_airline
+                {
+                    display: none;
+                }
+            }
         }
-
-        &_aircraft span:first-of-type {
-          display: none;
-        }
-
-        &_aircraft span:last-of-type {
-          display: inline;
-        }
-      }
     }
-  }
 
-  @media all and (max-width: 700px) {
-    &__cell {
-      &:hover {
-        &::after, &::before {
-          display: none;
-          // На мобильных устройствах не подсчвечивать "уголком"
+    @media all and (max-width: 800px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_aircraft
+                {
+                    width: 50px;
+                }
+
+                &_note
+                {
+                    display: none;
+                }
+
+                &_aircraft span:first-of-type
+                {
+                    display: none;
+                }
+
+                &_aircraft span:last-of-type
+                {
+                    display: inline;
+                }
+            }
         }
-
-        background-color: transparent;
-      }
-
-      &_type {
-        &_airline-logo {
-          display: none;
-        }
-
-        &_time {
-          font-size: 14px;
-          width: 60px;
-        }
-
-        &_note {
-          display: none;
-        }
-      }
     }
-  }
 
-  @media all and (max-width: 600px) {
-    &__cell {
-      &_type {
-        &_flight-number {
-          font-size: 14px;
-        }
+    @media all and (max-width: 700px)
+    {
+        &__cell
+        {
+            &:hover
+            {
+                background-color: transparent;
+                &::after,
+                &::before
+                {
+                    display: none;
+                    // На мобильных устройствах не подсчвечивать "уголком"
+                }
+            }
 
-        &_aircraft {
-          display: none;
+            &_type
+            {
+                &_airline-logo
+                {
+                    display: none;
+                }
+
+                &_time
+                {
+                    font-size: 14px;
+
+                    width: 60px;
+                }
+
+                &_note
+                {
+                    display: none;
+                }
+            }
         }
-      }
     }
-  }
 
-  @media all and (max-width: 500px) {
-    &__cell {
-      &_type {
-        &_status {
-          display: none;
+    @media all and (max-width: 600px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_flight-number
+                {
+                    font-size: 14px;
+                }
+
+                &_aircraft
+                {
+                    display: none;
+                }
+            }
         }
-      }
     }
-  }
 
-  @media all and (max-width: 400px) {
-    &__cell {
-      padding: 10px 5px;
-
-      &_type {
-        &_time {
-          width: 40px;
+    @media all and (max-width: 500px)
+    {
+        &__cell
+        {
+            &_type
+            {
+                &_status
+                {
+                    display: none;
+                }
+            }
         }
-
-        &_flight-number {
-          width: 60px;
-        }
-      }
     }
-  }
+
+    @media all and (max-width: 400px)
+    {
+        &__cell
+        {
+            padding: 10px 5px;
+
+            &_type
+            {
+                &_time
+                {
+                    width: 40px;
+                }
+
+                &_flight-number
+                {
+                    width: 60px;
+                }
+            }
+        }
+    }
 }

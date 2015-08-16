@@ -1,23 +1,28 @@
-.label {
-  display: inline-block;
+.label
+{
+    display: inline-block;
 
-  padding: 1px 5px;
-  border-radius: 10px;
+    padding: 1px 5px;
 
-  background-color: gray;
-  color: #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: gray;
 
-  &_type {
-    &_success {
-      background-color: #64af64;
+    &_type
+    {
+        &_success
+        {
+            background-color: #64af64;
+        }
+
+        &_fail
+        {
+            background-color: #ff927e;
+        }
+
+        &_warn
+        {
+            background-color: #ffe44d;
+        }
     }
-
-    &_fail {
-      background-color: #ff927e;
-    }
-
-    &_warn {
-      background-color: #ffe44d;
-    }
-  }
 }

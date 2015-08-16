@@ -1,28 +1,36 @@
 $airline-logo-size: 30px;
 
-.airline-logo {
-  width: $airline-logo-size;
-  height: $airline-logo-size;
-  padding: 0;
-  background-color: gray;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0 auto;
-  line-height: $airline-logo-size;
-  color: white;
-  border-radius: 50%;
+.airline-logo
+{
+    line-height: $airline-logo-size;
 
-  &_type {
-    &_red {
-      background-color: tomato;
-    }
+    width: $airline-logo-size;
+    height: $airline-logo-size;
+    margin: 0 auto;
+    padding: 0;
 
-    &_green {
-      background-color: #282;
-    }
+    text-align: center;
+    text-transform: uppercase;
 
-    &_blue {
-      background-color: #6495ED;
+    color: white;
+    border-radius: 50%;
+    background-color: gray;
+
+    &_type
+    {
+        &_red
+        {
+            background-color: tomato;
+        }
+
+        &_green
+        {
+            background-color: #282;
+        }
+
+        &_blue
+        {
+            background-color: #6495ed;
+        }
     }
-  }
 }
