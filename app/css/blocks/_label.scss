@@ -1,0 +1,23 @@
+.label {
+  display: inline-block;
+
+  padding: 1px 5px;
+  border-radius: 10px;
+
+  background-color: gray;
+  color: #fff;
+
+  &_type {
+    &_success {
+      background-color: #64af64;
+    }
+
+    &_fail {
+      background-color: #ff927e;
+    }
+
+    &_warn {
+      background-color: #ffe44d;
+    }
+  }
+}

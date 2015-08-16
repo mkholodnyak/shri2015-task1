@@ -1,0 +1,18 @@
+@import "../variables";
+
+.flight-icon {
+  background: no-repeat 50%;
+
+  background-size: 32px 21px;
+  &_type {
+
+    &_departure {
+      background-image: url('../../' + $image-path + 'departure-icon.png');
+    }
+
+    &_arrival {
+      background-image: url('../../' + $image-path + 'arrival-icon.png');
+
+    }
+  }
+}

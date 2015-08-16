@@ -1,0 +1,9 @@
+.switcher-label {
+  display: inline-block;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #ffe15e;
+  }
+}
