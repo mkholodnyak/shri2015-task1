@@ -29,7 +29,7 @@ gulp.task('start-livereload-server', function () {
 
 gulp.task('html', function () {
     gulp.src('*.html')
-        //.pipe($.rename('index.html'))
+        .pipe($.rename('index.html'))
         .pipe($.minifyHtml())
         .pipe(gulp.dest(config.outPath))
         .pipe(liveReload({stream: true}));
