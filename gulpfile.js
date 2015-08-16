@@ -38,6 +38,7 @@ gulp.task('html', function () {
 gulp.task('css', function () {
     gulp.src(config.appPath + '/css/**/*.scss')
         .pipe($.sass().on('error', $.sass.logError))
+        .pipe($.autoprefixer())
         .pipe($.minifyCss())
         .pipe(gulp.dest(config.outPath + config.appPath + 'css'))
         .pipe(liveReload({stream: true}));
