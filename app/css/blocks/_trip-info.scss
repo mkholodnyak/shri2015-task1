@@ -21,7 +21,7 @@
 
       transform: translateY(-50%);
 
-      background: no-repeat 50% url(/app/images/arrival-icon.png);
+      background: no-repeat 50% url('../../' + $image-path + 'arrival-icon.png');
       background-size: contain;
     }
   }
