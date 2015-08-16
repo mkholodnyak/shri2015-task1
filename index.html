@@ -1,10 +1,1275 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="app/css/main.css"/>
+    <title>Таблица аэропорта</title>
 </head>
 <body>
+<section class="table-container">
+    <div class="table-container__table">
+        <input type="checkbox" name="departure-checkbox" class="switcher" id="departure-checkbox" checked>
+        <input type="checkbox" name="arrival-checkbox" class="switcher" id="arrival-checkbox" checked>
 
+        <table class="airport-table">
+            <thead class="airport-table__head">
+            <tr class="table-header">
+                <th class="table-header__cell table-header__cell_type_switchers">
+                    <label class="switcher-label" for="departure-checkbox" id="departure-label">Вылет</label>
+                    <span>/</span>
+                    <label class="switcher-label" for="arrival-checkbox" id="arrival-label">Прилёт</label>
+                </th>
+                <th class="table-header__cell table-header__cell_type_time">Время</th>
+                <th class="table-header__cell table-header__cell_type_flight-number">Рейс</th>
+                <th class="table-header__cell ">Направление</th>
+                <th class="table-header__cell table-header__cell_type_airline-logo"></th>
+                <th class="table-header__cell table-header__cell_type_airline">Авиакомпания</th>
+                <th class="table-header__cell table-header__cell_type_aircraft">Самолёт</th>
+                <th class="table-header__cell table-header__cell_type_status">Статус</th>
+                <th class="table-header__cell table-header__cell_type_note">Примечание</th>
+            </tr>
+            </thead>
+
+            <tbody class="airport-table__body">
+
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l0">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l0">00:15</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l0">FV 6741</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l0">Уфа</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l0">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l0"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l0"><span class="">Летит</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l0"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l1">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l1">00:15</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l1">FV 6401</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l1">Екатеринбург</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l1">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l1"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l1"><span
+                        class="">По расписанию</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l1"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link" href="#l2">Вылет</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l2">00:25</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l2">FV 6711</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l2">Пермь</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l2">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l2"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l2"><span class="">Регистрация</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l2"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link" href="#l3">Вылет</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l3">00:45</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l3">FV 6345</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l3">Мурманск</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l3">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l3"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l3"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l3"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l4">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l4">01:00</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l4">FV 6753</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l4">Самара</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l4">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l4"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l4"><span class="">Летит</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l4"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link" href="#l5">Вылет</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l5">01:45</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l5">FV 6305</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l5">Архангельск</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l5">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l5"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l5"><span class="">Вылетел</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l5"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link" href="#l6">Вылет</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l6">02:30</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l6">N4 1833</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l6">Анталья</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">СЕ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l6">Северный Ветер</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l6"><span>Boeing 763</span><span>B763</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l6"><span
+                        class="">Ожидание посадки</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l6"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l7">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l7">03:50</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l7">SU 037</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l7">Москва SVO</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">АЭ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l7">Аэрофлот</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l7"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l7"><span
+                        class="">По расписанию</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l7"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l8">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l8">04:05</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l8">KTK3315</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l8">Анталья</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">КА</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l8">Катэкавиа</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l8"><span>Boeing 752</span><span>B752</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l8"><span
+                        class="label label_type_success">Приземлился</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l8"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l9">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l9">04:20</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l9">UN 467</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l9">Ларнака</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">ТР</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l9">Трансаэро</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l9"><span>Boeing 763</span><span>B763</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l9"><span
+                        class="label label_type_success">Приземлился</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l9"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l10">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l10">04:45</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l10">ELB 511</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l10">Закинтос</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">ЭЛ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l10">Эллин эйр</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l10"><span>Boeing 733</span><span>B733</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l10"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l10"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l11">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l11">04:55</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l11">U6 513</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l11">Симферополь</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">УР</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l11">Уральские авиалинии</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l11"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l11"><span
+                        class="label label_type_success">Приземлился</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l11"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l12">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l12">05:00</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l12">UN 463</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l12">Ларнака</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">ТР</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l12">Трансаэро</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l12"><span>Boeing 763</span><span>B763</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l12"><span
+                        class="">Ожидание посадки</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l12"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l13">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l13">05:05</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l13">VY 7893</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l13">Барселона</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">VU</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l13">Vueling</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l13"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l13"><span
+                        class="">Регистрация</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l13"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l14">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l14">05:10</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l14">SU 035</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l14">Москва SVO</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">АЭ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l14">Аэрофлот</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l14"><span>Aerobus 321</span><span>A321</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l14"><span
+                        class="">Регистрация</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l14"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l15">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l15">05:20</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l15">S7 038</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l15">Москва DME</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">S7</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l15">S7</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l15"><span>Aerobus 319</span><span>A319</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l15"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l15"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l16">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l16">05:35</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l16">B2 944</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l16">Минск</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">БЕ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l16">Белавиа</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link" href="#l16"><span>Bombardier RJ1</span><span>CRJ1</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l16"><span
+                        class="">Ожидание посадки</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l16"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l17">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l17">05:40</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l17">LH 1439</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l17">Франкфурт-на-Майне</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">LU</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l17">Lufthansa</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l17"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l17"><span class="">Вылетел</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l17"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l18">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l18">05:55</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l18">FV 6115</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l18">Москва DME</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l18">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l18"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l18"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l18"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l19">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l19">06:00</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l19">U6 511</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l19">Симферополь</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">УР</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l19">Уральские авиалинии</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l19"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l19"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l19"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l20">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l20">06:10</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l20">FV 6117</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l20">Москва VKO</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l20">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l20"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l20"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l20"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l21">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l21">06:15</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l21">SU 033</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l21">Москва SVO</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">АЭ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l21">Аэрофлот</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l21"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l21"><span
+                        class="label label_type_success">Приземлился</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l21"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l22">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l22">06:15</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l22">BJ 821</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l22">Монастир</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">NO</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l22">Nouvelair Tunisie</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l22"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l22"><span
+                        class="">Ожидание посадки</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l22"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l23">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l23">06:15</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l23">AF 1153</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l23">Париж CDG</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">AI</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l23">Air France</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l23"><span>Aerobus 319</span><span>A319</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l23"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l23"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l24">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l24">06:20</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l24">PS 544</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l24">Киев</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">МЕ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l24">Международные авиалинии Украины</a>
+                </td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l24"><span>Boeing 738</span><span>B738</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l24"><span class="">Летит</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l24"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l25">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l25">06:30</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l25">7R 239</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l25">Белгород</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РУ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l25">РусЛайн</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link" href="#l25"><span>Bombardier RJ1</span><span>CRJ1</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l25"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l25"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l26">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l26">06:35</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l26">UN 9459</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l26">Анталья</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">ТР</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l26">Трансаэро</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l26"><span>Boeing 763</span><span>B763</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l26"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l26"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l27">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l27">06:45</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l27">UN 027</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l27">Москва VKO</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">ТР</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l27">Трансаэро</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l27"><span>Boeing 744</span><span>B744</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l27"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l27"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l28">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l28">06:55</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l28">FV 6209</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l28">Варна</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l28">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l28"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l28"><span
+                        class="">Ожидание посадки</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l28"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l29">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l29">07:00</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l29">FV 6121</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l29">Москва DME</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l29">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l29"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l29"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l29"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l30">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l30">07:00</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l30">U6 2745</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l30">Ереван</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">УР</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l30">Уральские авиалинии</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l30"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l30"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l30"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l31">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l31">07:05</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l31">UT 490</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l31">Москва VKO</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">ЮТ</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l31">ЮТэйр</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l31"><span>Boeing 735</span><span>B735</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l31"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l31"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l32">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l32">07:10</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l32">UN 447</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l32">Родос</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">ТР</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l32">Трансаэро</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l32"><span>Boeing 733</span><span>B733</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l32"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l32"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l33">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l33">07:10</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l33">FV 6123</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l33">Москва VKO</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l33">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l33"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l33"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l33"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l34">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l34">07:30</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l34">ИГ 738</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l34">Калуга</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">UN</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l34"></a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l34"><span>Unknown 145</span><span>E145</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l34"><span class="label label_type_fail">Отменён</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l34"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l35">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l35">07:40</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l35">FV 6237</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l35">Барселона</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l35">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l35"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l35"><span
+                        class="">Регистрация</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l35"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l36">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l36">08:00</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l36">FV 6751</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l36">Самара</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l36">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l36"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l36"><span
+                        class="label label_type_success">Приземлился</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l36"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l37">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l37">08:00</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l37">FV 6641</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l37">Минеральные Воды</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l37">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l37"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l37"><span class="">Летит</span></a></td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l37"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l38">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l38">08:10</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l38">FV 6601</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l38">Анапа</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l38">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l38"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l38"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l38"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_arrival">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_arrival"><a class="trip__link" href="#l39">Прилёт</a>
+                </td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l39">08:10</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l39">FV 6267</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l39">Тель-Авив</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l39">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l39"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l39"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l39"> Нет</a></td>
+            </tr>
+            <tr class="trip trip_type_departure">
+                <td class="trip__cell trip__cell_type_icon flight-icon flight-icon_type_departure"><a class="trip__link"
+                                                                                                      href="#l40">Вылет</a></td>
+                <td class="trip__cell trip__cell_type_time"><a class="trip__link" href="#l40">08:15</a></td>
+                <td class="trip__cell trip__cell_type_flight-number"><a class="trip__link" href="#l40">FV 6241</a></td>
+                <td class="trip__cell trip__cell_type_city"><a class="trip__link" href="#l40">Берлин SXF</a></td>
+                <td class="trip__cell trip__cell_type_airline-logo">
+                    <div class="airline-logo">РО</div>
+                </td>
+                <td class="trip__cell trip__cell_type_airline"><a class="trip__link" href="#l40">Россия</a></td>
+                <td class="trip__cell trip__cell_type_aircraft"><a class="trip__link"
+                                                                   href="#l40"><span>Aerobus 320</span><span>A320</span></a></td>
+                <td class="trip__cell trip__cell_type_status"><a class="trip__link" href="#l40"><span class="label label_type_warn">Задерживается</span></a>
+                </td>
+                <td class="trip__cell trip__cell_type_note"><a class="trip__link" href="#l40"> Нет</a></td>
+            </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<div class="modals">
+    <div id="l0" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Уфа</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6741</p>
+
+                    <p>Время: 00:15</p>
+
+                    <p>Статус: Летит</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l1" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Екатеринбург</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6401</p>
+
+                    <p>Время: 00:15</p>
+
+                    <p>Статус: По расписанию</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l2" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Пермь</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6711</p>
+
+                    <p>Время: 00:25</p>
+
+                    <p>Статус: Регистрация</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l3" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Мурманск</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6345</p>
+
+                    <p>Время: 00:45</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l4" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Самара</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6753</p>
+
+                    <p>Время: 01:00</p>
+
+                    <p>Статус: Летит</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l5" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Архангельск</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6305</p>
+
+                    <p>Время: 01:45</p>
+
+                    <p>Статус: Вылетел</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l6" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Анталья</h2>
+
+                <div class="trip-info__data"><p>Северный Ветер, N4 1833</p>
+
+                    <p>Время: 02:30</p>
+
+                    <p>Статус: Ожидание посадки</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l7" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва SVO</h2>
+
+                <div class="trip-info__data"><p>Аэрофлот, SU 037</p>
+
+                    <p>Время: 03:50</p>
+
+                    <p>Статус: По расписанию</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l8" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Анталья</h2>
+
+                <div class="trip-info__data"><p>Катэкавиа, KTK3315</p>
+
+                    <p>Время: 04:05</p>
+
+                    <p>Статус: Приземлился</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l9" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Ларнака</h2>
+
+                <div class="trip-info__data"><p>Трансаэро, UN 467</p>
+
+                    <p>Время: 04:20</p>
+
+                    <p>Статус: Приземлился</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l10" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Закинтос</h2>
+
+                <div class="trip-info__data"><p>Эллин эйр, ELB 511</p>
+
+                    <p>Время: 04:45</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l11" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Симферополь</h2>
+
+                <div class="trip-info__data"><p>Уральские авиалинии, U6 513</p>
+
+                    <p>Время: 04:55</p>
+
+                    <p>Статус: Приземлился</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l12" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Ларнака</h2>
+
+                <div class="trip-info__data"><p>Трансаэро, UN 463</p>
+
+                    <p>Время: 05:00</p>
+
+                    <p>Статус: Ожидание посадки</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l13" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Барселона</h2>
+
+                <div class="trip-info__data"><p>Vueling, VY 7893</p>
+
+                    <p>Время: 05:05</p>
+
+                    <p>Статус: Регистрация</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l14" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва SVO</h2>
+
+                <div class="trip-info__data"><p>Аэрофлот, SU 035</p>
+
+                    <p>Время: 05:10</p>
+
+                    <p>Статус: Регистрация</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l15" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва DME</h2>
+
+                <div class="trip-info__data"><p>S7, S7 038</p>
+
+                    <p>Время: 05:20</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l16" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Минск</h2>
+
+                <div class="trip-info__data"><p>Белавиа, B2 944</p>
+
+                    <p>Время: 05:35</p>
+
+                    <p>Статус: Ожидание посадки</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l17" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Франкфурт-на-Майне</h2>
+
+                <div class="trip-info__data"><p>Lufthansa, LH 1439</p>
+
+                    <p>Время: 05:40</p>
+
+                    <p>Статус: Вылетел</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l18" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва DME</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6115</p>
+
+                    <p>Время: 05:55</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l19" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Симферополь</h2>
+
+                <div class="trip-info__data"><p>Уральские авиалинии, U6 511</p>
+
+                    <p>Время: 06:00</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l20" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва VKO</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6117</p>
+
+                    <p>Время: 06:10</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l21" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва SVO</h2>
+
+                <div class="trip-info__data"><p>Аэрофлот, SU 033</p>
+
+                    <p>Время: 06:15</p>
+
+                    <p>Статус: Приземлился</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l22" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Монастир</h2>
+
+                <div class="trip-info__data"><p>Nouvelair Tunisie, BJ 821</p>
+
+                    <p>Время: 06:15</p>
+
+                    <p>Статус: Ожидание посадки</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l23" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Париж CDG</h2>
+
+                <div class="trip-info__data"><p>Air France, AF 1153</p>
+
+                    <p>Время: 06:15</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l24" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Киев</h2>
+
+                <div class="trip-info__data"><p>Международные авиалинии Украины, PS 544</p>
+
+                    <p>Время: 06:20</p>
+
+                    <p>Статус: Летит</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l25" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Белгород</h2>
+
+                <div class="trip-info__data"><p>РусЛайн, 7R 239</p>
+
+                    <p>Время: 06:30</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l26" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Анталья</h2>
+
+                <div class="trip-info__data"><p>Трансаэро, UN 9459</p>
+
+                    <p>Время: 06:35</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l27" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва VKO</h2>
+
+                <div class="trip-info__data"><p>Трансаэро, UN 027</p>
+
+                    <p>Время: 06:45</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l28" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Варна</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6209</p>
+
+                    <p>Время: 06:55</p>
+
+                    <p>Статус: Ожидание посадки</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l29" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва DME</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6121</p>
+
+                    <p>Время: 07:00</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l30" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Ереван</h2>
+
+                <div class="trip-info__data"><p>Уральские авиалинии, U6 2745</p>
+
+                    <p>Время: 07:00</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l31" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва VKO</h2>
+
+                <div class="trip-info__data"><p>ЮТэйр, UT 490</p>
+
+                    <p>Время: 07:05</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l32" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Родос</h2>
+
+                <div class="trip-info__data"><p>Трансаэро, UN 447</p>
+
+                    <p>Время: 07:10</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l33" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Москва VKO</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6123</p>
+
+                    <p>Время: 07:10</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l34" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Калуга</h2>
+
+                <div class="trip-info__data"><p>, ИГ 738</p>
+
+                    <p>Время: 07:30</p>
+
+                    <p>Статус: Отменён</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l35" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Барселона</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6237</p>
+
+                    <p>Время: 07:40</p>
+
+                    <p>Статус: Регистрация</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l36" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Самара</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6751</p>
+
+                    <p>Время: 08:00</p>
+
+                    <p>Статус: Приземлился</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l37" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Минеральные Воды</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6641</p>
+
+                    <p>Время: 08:00</p>
+
+                    <p>Статус: Летит</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l38" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Анапа</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6601</p>
+
+                    <p>Время: 08:10</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l39" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Тель-Авив</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6267</p>
+
+                    <p>Время: 08:10</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="l40" class="modal-window"><a href="#" class="modal-window__close-button"></a>
+
+        <div class="modal-window__content trip-info"><a href="#" class="trip-info__close-button close-button"></a>
+
+            <div class="trip-info__content"><h2 class="trip-info__city">Берлин SXF</h2>
+
+                <div class="trip-info__data"><p>Россия, FV 6241</p>
+
+                    <p>Время: 08:15</p>
+
+                    <p>Статус: Задерживается</p></div>
+            </div>
+        </div>
+    </div>
+
+</div>
 </body>
 </html>
