@@ -1,5 +1,8 @@
 @import '../variables';
 
+$departure-icon: '../../' + $image-path + 'departure-icon.png';
+$arrival-icon:'../../' + $image-path + 'arrival-icon.png';
+
 .flight-icon
 {
     background: no-repeat 50%;
@@ -8,12 +11,12 @@
     {
         &_departure
         {
-            background-image: url('../../' ) $image-path + 'departure-icon.png';;
+            background-image: url($departure-icon);
         }
 
         &_arrival
         {
-            background-image: url('../../' ) $image-path + 'arrival-icon.png';;
+            background-image: url($arrival-icon);
         }
     }
 }

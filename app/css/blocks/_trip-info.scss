@@ -1,5 +1,6 @@
 @import '../variables';
 
+$plane-icon: '../../' + $image-path + 'plane-icon.png';
 .trip-info
 {
     &__content
@@ -22,8 +23,8 @@
 
             border: 2px solid $main-color;
             border-radius: 50%;
-            background: no-repeat 50% url('../../' ) $image-path + 'arrival-icon.png';
-            background-size: contain;;
+            background: no-repeat 50% url($plane-icon);
+            background-size: 70px 34px;
         }
     }
 
